@@ -4,3 +4,15 @@
 
 // Find the minimal length of the jump enough to avoid all the obstacles.
 
+function avoidObstacles(inputArray) {
+    let max = Math.max.apply(null, inputArray);
+    
+    for(let jump = 1; jump < max+1; jump++){
+        // check if every element in the array is not equally divisible by jump (no collisions with obstacles aka matches)
+        if(inputArray.every(num => num%jump !== 0)){
+            return jump;   
+        }
+    }
+    // if all elements are divisible, then have to jump over entire line of obstacles aka largest number + 1
+    return max+1;
+}
