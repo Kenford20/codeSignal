@@ -4,3 +4,21 @@
 
 // Return the blurred image as an integer, with the fractions rounded down.
 
+function boxBlur(image) {
+    function boxBlur(image) {
+        let boxSum = 0;
+        let blurredImage = [];
+        let numRows = image.length - 2;
+        let numCols = image[0].length - 2;
+    
+        for(let row = 0; row < numRows; row++){
+            let boxesOfNewRows = [];
+            for(let col = 0; col < numCols; col++){
+                boxSum = image[row][col] + image[row][col+1] + image[row][col+2] + image[row+1][col] + image[row+1][col+1] + image[row+1][col+2] + image[row+2][col] + image[row+2][col+1] + image[row+2][col+2];
+                boxesOfNewRows.push(Math.floor(boxSum/9));
+            }
+            blurredImage.push(boxesOfNewRows);
+        }    
+        return blurredImage;
+    }
+}
