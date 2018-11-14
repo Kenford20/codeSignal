@@ -4,3 +4,15 @@
 
 // Given the list of commands the coach has given, count the number of such commands after which the students will be facing the same direction.
 
+function lineUp(commands) {
+    let num = 0;
+    let facingSameWay = true;
+        
+    for(let i = 0; i < commands.length; i++){
+        if(commands[i] === 'L' || commands[i] === 'R')
+            facingSameWay = !facingSameWay;
+        if(facingSameWay)
+            num++;
+    }
+    return num;
+}
