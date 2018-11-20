@@ -6,3 +6,10 @@
 // how many numbers in the range [1, n] have this weakness?
 // Return the answer as an array of two elements, where the first element is the answer to the first question, and the second element is the answer to the second question.
 
+function isUnstablePair(filename1, filename2) {
+    if(filename1 < filename2 && filename1.toUpperCase() >= filename2.toUpperCase()) 
+        return true;
+    else if(filename1 > filename2 && filename1.toUpperCase() <= filename2.toUpperCase())
+        return true;
+    else return false;
+}

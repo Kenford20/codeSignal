@@ -4,3 +4,7 @@
 
 // Your task is to check by given string inputString whether it corresponds to MAC-48 address or not.
 
+function isMAC48Address(inputString) {
+    let isMACaddress = /^[\d|A-F]{2}-[\d|A-F]{2}-[\d|A-F]{2}-[\d|A-F]{2}-[\d|A-F]{2}-[\d|A-F]{2}$/
+    return isMACaddress.test(inputString);
+}
