@@ -12,3 +12,21 @@
 // constructSquare(s) = 900.
 // It can be obtained after reordering the initial string into "baa" and replacing "a" with 0 and "b" with 9.
 
+function electionsWinners(votes, k) {
+    votes = votes.map(vote => vote + k); // add votes to all candidates
+    
+    // all candidates have the same number of votes
+    if(votes.every(vote => vote === votes[0])){
+        if(k === 0)
+            return 0; // tie
+        else
+            return votes.length; // all candidates can win
+    }
+    
+    // if 0 voters, check if there is only 1 occurence of max (this candidate is the winner), if there are more than 1 occurence of the max, then theres going to be a tie
+    if(k === 0)
+        return votes.filter(vote => vote === Math.max(...votes)).length > 1 ? 0 : 1;
+
+    // for k > 0, return number of candidates that have a greater number of votes than the losing candidate
+    return votes.filter(vote => vote > Math.min(...votes)).length;
+}
