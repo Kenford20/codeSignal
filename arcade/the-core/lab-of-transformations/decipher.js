@@ -14,7 +14,7 @@
 // Explanation: charCode('e') = 101, charCode('a') = 97, charCode('s') = 115 and charCode('y') = 121.
 
 function decipher(cipher) {
-    let chars = cipher.match(/9[5-9]|.{1,3}/g);
+    let chars = cipher.match(/9[5-9]|.{3}/g); // match 95-99 or sets of 3 chars ( use {1,3} for up to 3 chars)
     
     return chars.map(charCode => String.fromCharCode(charCode)).join('');
 }
