@@ -3,3 +3,12 @@
 
 // Return the value of 2position_of_the_found_bit.
 
+function secondRightmostZeroBit(n) {
+    return (num => {
+      let binaryN = num.toString(2).split('');
+      binaryN.splice(binaryN.lastIndexOf('0'), 1);
+  
+      return Math.pow(2, binaryN.length - binaryN.lastIndexOf('0'));
+    })(n); 
+  }
+  
