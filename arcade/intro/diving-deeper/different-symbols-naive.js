@@ -7,3 +7,6 @@
 
 // There are 3 different characters a, b and c.
 
+function differentSymbolsNaive(s) {
+    return s.split('').filter((char, index, string) => string.indexOf(char) === index).length;
+}

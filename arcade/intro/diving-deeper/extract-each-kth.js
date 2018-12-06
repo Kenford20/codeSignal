@@ -6,14 +6,8 @@
 // extractEachKth(inputArray, k) = [1, 2, 4, 5, 7, 8, 10].
 
 function extractEachKth(inputArray, k) {
-    let firstIndex = k - 1;
-    let length = inputArray.length;
-    
-    if(k === 1) return [];
-    
-    for(let i = firstIndex; i < length; i += k){
+    for(let i = k - 1; i < inputArray.length; i += k - 1){
         inputArray.splice(i, 1);
-        i--;
     }
     return inputArray;
 }
