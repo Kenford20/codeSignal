@@ -11,3 +11,6 @@
 // For address = "<>[]:,;@"!#$%&*+-/=?^_{}| ~.a"@example.org", the output should be
 // findEmailDomain(address) = "example.org".
 
+function findEmailDomain(address) {
+    return address.slice(address.lastIndexOf('@') + 1);
+}
