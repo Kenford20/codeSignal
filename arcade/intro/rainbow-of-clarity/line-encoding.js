@@ -10,3 +10,17 @@
 // For s = "aabbbc", the output should be
 // lineEncoding(s) = "2a3bc".
 
+function lineEncoding(s) {
+    let numLetters = 1;
+    let encodedStr = '';
+    
+    for(let i = 0; i < s.length; i++){
+        if(s[i] === s[i+1])
+            numLetters++;
+        else{
+            encodedStr = (numLetters > 1) ? encodedStr + numLetters + s[i] : encodedStr + s[i];
+            numLetters = 1;
+        }
+    }
+    return encodedStr;
+}
