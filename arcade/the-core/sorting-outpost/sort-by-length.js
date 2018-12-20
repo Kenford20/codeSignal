@@ -17,3 +17,18 @@
 //                             "abc",
 //                             "aaa"]
 
+function sortByLength(inputArray) {
+    let lengths = inputArray.map(str => str.length).sort((a,b) => a - b);
+    let index = 0;
+    let sortedStrings = [];
+    
+    for(let i = 0; i < lengths.length; i++){
+        while(lengths[i] !== inputArray[index].length){
+            index++;
+        }
+        sortedStrings.push(inputArray[index]);
+        inputArray.splice(index, 1);
+        index = 0;
+    }
+    return sortedStrings;
+}
