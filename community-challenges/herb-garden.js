@@ -18,12 +18,8 @@ function herbGarden(plants, days) {
     while(days > 0) {
         largestPlant = Math.max(...plants);
         numLeaves += Math.floor(largestPlant / 2);
-        console.log('added: ' + Math.floor(largestPlant / 2));
-        console.log(numLeaves);
         plants.splice(plants.indexOf(largestPlant), 1, Math.ceil(largestPlant / 2));
-        
         plants = plants.map(plant => plant + 2);
-        console.log(plants);
         days--;
     }
     return numLeaves;
