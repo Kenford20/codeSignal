@@ -18,3 +18,4 @@ function splitByValue(k, elements) {
 // first attempt at a leaderboard solution lol. placed 9th at 64 characters
 s = splitByValue = (k, e) => 
     [...e.filter(n => n < k), ...e.filter(n => n >= k)]
+    
