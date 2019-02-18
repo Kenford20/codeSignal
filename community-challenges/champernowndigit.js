@@ -17,3 +17,4 @@ function champernowneDigit(n) {
     }
     return parseInt(champerNowneConstant[n-1]);
 }
+
