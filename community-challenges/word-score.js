@@ -18,3 +18,4 @@ function WordScore(word) {
     
     return word.split('').map(letter => alphabet.indexOf(letter)).reduce((a, b) => a + b);
 }
+git
