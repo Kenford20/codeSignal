@@ -17,12 +17,12 @@ function candyCrush1(gameboard) {
         for(let j = 0; j < gameboard[0].length; j++) {
             if(j < gameboard[0].length - 2) {
                 if(gameboard[i][j] === gameboard[i][j+1] && gameboard[i][j] === gameboard[i][j+2])
-                return true;
+                    return true;
             }
             
             if(i < gameboard.length - 2) {
                 if(gameboard[i][j] === gameboard[i+1][j] && gameboard[i][j] === gameboard[i+2][j])
-                return true;
+                    return true;
             }
         }
     }
