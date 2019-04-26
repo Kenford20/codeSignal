@@ -62,6 +62,6 @@ function proCategorization(pros, preferences) {
             output.push([[service], currPros]);
         }
     }));
-    return output.sort((a, b) => a[0][0] > b);
+    return output.sort((a, b) => a[0][0] > b[0][0]);
 }
 
