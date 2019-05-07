@@ -18,9 +18,9 @@
 
 function replaceMiddle(arr) {
     if(arr.length % 2 === 0) {
-        let first = arr.length / 2 - 1;
-        let second = arr.length / 2;
-        arr.splice(first, 2, arr[first] + arr[second]);
+        let mid1 = arr.length / 2 - 1;
+        let mid2 = arr.length / 2;
+        arr.splice(mid1, 2, arr[mid1] + arr[mid2]);
     }
     return arr;
 }
