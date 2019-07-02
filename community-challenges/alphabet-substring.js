@@ -11,3 +11,8 @@ function alphabetSubstring(s) {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     return alphabet.indexOf(s) >= 0;
 }
+
+function alphabetSubstring(s) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    return new RegExp(s).test(alphabet);
+}
